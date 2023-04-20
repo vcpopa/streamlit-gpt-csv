@@ -11,6 +11,8 @@ from openai.error import RateLimitError
 from langchain.agents import create_pandas_dataframe_agent
 import pandas as pd
 import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
 openai.api_key=st.secrets.__getitem__("OPENAI_API_KEY")
 llm = OpenAI(temperature=0,model_name='text-davinci-003',max_retries=0)
 def generate_plot(user_query,data):
